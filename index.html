@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="#"> LOGO</a></div>
+      <ul class="links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu ">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="contact">Contact</a></li>
+      <li><a href="menu" class="action_btn"> Get Start</a></li>
+
+    </div>
+  </header>
+
+  <section id="hero">
+
+    <h1>ISLETME ISMI</h1>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed facilis sapiente perferendis, non et ea, minima
+      <br>
+      voluptate aut omnis numquam eum quasi quibusdam veritatis doloribus odio, necessitatibus neque rem voluptatem.
+    </p> 
+
+    <a href="#menu" class="action_btn"> Get Start</a>
+
+  </section>
+
+  <section class="menu" id="menu">
+    <h1 class="heading">our <span>menu</span></h1> <hr>
+    <div class="box-container">
+      <!-- MENU BOX START-->
+      <div class="box">
+        <div class="box head">
+          <span class="menu-category"> FOOD </span>
+          <h3>hangi yemek</h3>
+          
+          <img src="FOOD-TRUCK-MONTAJE.webp" alt="menu">
+          <h4>meyveler / 40zl</h4> 
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, tempore?</p>
+          
+
+        <br><hr/>
+          
+
+          <img src="FOOD-TRUCK-MONTAJE.webp" alt="menu">
+          <h4>meyveler / 40zl</h4> <hr>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, tempore?</p>
+        
+        </div>
+
+      </div>
+      <div class="box">
+        <div class="box head">
+          <span class="menu-category">DRINKS</span>
+          <h3>hangi icecek</h3>
+          <img src="R.jpeg" alt="menu">
+          <h4>sampanya / 40zl</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, tempore?</p>
+         
+        </div>
+
+      </div>
+    </div>
+    <!--MENU BOX END-->
+    </div>
+  </section>
+  
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Kodlarınız buraya gelecek
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open');
+        const isOpen = dropDownMenu.classList.contains('open');
+
+        toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars';
+    }
+});
+</script>
+
+
+
+
+  <script src="app.js"></script>
+
+
+</body>
+
+</html>
