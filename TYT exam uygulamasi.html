@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+      let turkceDOgru, turkceYanlis = 0;
+      let matematikDogru, matematikYanlis = 0;            // burada derslerin y yada d oldugunu tanimaldim
+      let sosyalDogru, sosyalYanlis = 0;
+    let fenDogru, fenYanlis = 0;
+         let puan = 0;
+         let okulPuani = 0;
+
+
+         let yeniSatir = "\r\n";
+         let mesaj = "lutfen yapmak istediginiz islemi secin " + yeniSatir
+             + " 1- puan hesaplama " + yeniSatir                                // burada mesajimi verdim aliciya
+             + " 2- Cikis Yap" + yeniSatir
+
+         let secim = prompt(mesaj);                  // mesaji burada yakaladim prompt ile
+         switch (secim) {
+            case "1":
+                okulPuani = Number(prompt("okul puaninizi giriniz"));
+                 turkceDOgru = Number(prompt("turkce dogrunuzu giriniz"));
+                turkceYanlis = Number(prompt("turkce yanlisinizi giriniz"));
+
+               matematikDogru = Number(prompt("matematik dogrunuzu giriniz"));       // prompt ile burada aliciyi harekete gecirmak icin oan soru sordum
+
+                matematikYanlis = Number(prompt("metematik yanlisinizi giriniz"));
+
+                sosyalDogru = Number(prompt("sosyal dogrunuzu giriniz"));
+        
+                fenDogru = Number(prompt("fen dogrunuzu giriniz"));
+                 fenYanlis = Number(prompt("fen yanlisinizi giriniz"));
+                /*
+             !burada 30 d 8 y varsa sekizi 2 ye bolup 4 bu dort bizim 4 soru 1 yanlis anlamina gelir
+        */
+               let dogruSayisi = turkceDOgru + matematikDogru + sosyalDogru + fenDogru;
+               let yanlisSayisi = turkceYanlis + matematikYanlis + sosyalYanlis + fenYanlis
+                let kalanDogruSayisi = dogruSayisi - (yanlisSayisi / 4);
+
+                puan = (kalanDogruSayisi * 4) + 100 + okulPuani;
+
+
+              alert("TYT puaniniz " + puan);                                 // sonuc
+
+
+               break;
+
+            case "2":
+                alert("uygulamadan basarili bir sekilde cikis yapilmistir...");
+
+                break;
+
+           default:
+            alert("luften gecerli bir numarayi  seciniz !");                 //gecersiz girilen islem sonucu adami uyardim 
+
+
+        }
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
