@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          // 153 bir armstornd sayisi dir yapmis oldugum islem 
+        // 1 5 3 un kuplerinin toplami yine 153 u vermelidir 
+        //! 153 = 1*1*1 + 5*5*5 + 3*3*3 = 1 + 125 + 27 == 153 ;;
+
+         let sayi =prompt(" lutfen bir sayi giriniz");
+          let toplam = 0;
+          for( i =0; i<sayi.length; i++){
+             let rakam = sayi.charAt(i);
+              toplam+=rakam*rakam*rakam;
+          }
+         if(sayi==toplam){
+             alert("armstrong dur");
+         }else{
+             alert("armstrong degildir");
+         }
+    </script>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
