@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+     // ---------------------------------- benzin istasyonu uygulamasi --------------------------------
+
+
+
+
+
+
+
+         //dizel    6.456
+         // lpg     2.813
+       // benzin  6.645 
+             let dizel = 6.456, lpg = 2.813, benzin = 6.645;
+            const yeniSatir = "\r\n"
+             let yakitMetni = "1-dizel" + yeniSatir
+                 + "2-lpg" + yeniSatir
+                + "3-benzin" + yeniSatir
+                 + "yakit tipini seciniz";
+
+
+            let yakitTipi = prompt(yakitMetni);
+             if(yakitTipi=="1" || yakitTipi=="2" || yakitTipi=="3" ){
+
+
+            let yakitLitresi = Number(prompt("yakit litresini giriniz"));
+             let bakiye = Number(prompt("bakiyenizi giriniz"));
+
+             if (yakitTipi = "1") {
+              //dizel
+
+                 let odenecekTutar = dizel * yakitLitresi;
+                 if (odenecekTutar < bakiye) {
+                     //islem basarili
+                    bakiye=bakiye-odenecekTutar;
+                 alert("yakit alma isleminiz basari ile gerceklesmistir" + yeniSatir
+                        + "kalan bakiye" + bakiye);
+            } else {
+                     //yeterli egildir
+                     alert("bakiyeniz yeterli degildir" + yeniSatir
+                         + "odenecek tutar" + odenecekTutar + yeniSatir
+                         + "bakiyeniz" + bakiye + yeniSatir
+                        + "eksik tutar" + (odenecekTutar - bakiye));
+                }
+
+         }
+             else if (yakitTipi = "2") {
+                //lpg
+                let odenecekTutar = lpg * yakitLitresi;
+                if (odenecekTutar < bakiye) {
+                    //islem basarili
+                    bakiye = bakiye - odenecekTutar;
+                    alert("yakit alma isleminiz basari ile gerceklesmistir" + yeniSatir
+                        + "kalan bakiye" + bakiye);
+                 } else {
+                    //yeterli egildir
+                     alert("bakiyeniz yeterli degildir" + yeniSatir
+                         + "odenecek tutar" + odenecekTutar + yeniSatir
+                         + "bakiyeniz" + bakiye + yeniSatir
+                         + "eksik tutar" + (odenecekTutar - bakiye));
+                }
+        }
+             else if (yakitTipi = "3") {
+                //benzin
+                let odenecekTutar = benzin * yakitLitresi;
+             if (odenecekTutar < bakiye) {
+                    //islem basarili
+                     bakiye = bakiye - odenecekTutar;
+                     alert("yakit alma isleminiz basari ile gerceklesmistir" + yeniSatir
+                        + "kalan bakiye" + bakiye);
+               } else {
+                     //yeterli egildir
+                     alert("bakiyeniz yeterli degildir" + yeniSatir
+                     + "odenecek tutar" + odenecekTutar + yeniSatir
+                         + "bakiyeniz" + bakiye + yeniSatir
+                         + "eksik tutar" + (odenecekTutar - bakiye));
+                 }
+
+             }
+        }
+      else {
+            alert("lutfen gecerli bir yakit tipi giriniz!!")
+             }
+</script>
+<body>
+    <script src="app.js"></script>
+</body>
+</html>
